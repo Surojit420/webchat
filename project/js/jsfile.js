@@ -233,7 +233,6 @@ function delete_me(id,mail)
 }
 function delete_ev(id,us_mail,fr_mail)
 {
-	//alert("helo");
 	var d = new Date();          
     var n = d.toLocaleString([], { hour12: true});
   	var date=n.substring(0,9);
@@ -246,7 +245,7 @@ function delete_ev(id,us_mail,fr_mail)
 		data:"id="+id+"&usmail="+us_mail+"&frmail="+fr_mail+"&time="+time+"&time_re="+time_re,
 		success:function(result)
 		{
-			//alert(result);
+
 		},
 		error:function()
 		{
@@ -257,8 +256,7 @@ function delete_ev(id,us_mail,fr_mail)
 }
 function blockfri(femail,id)
 {
-	//alert(femail);
-	//alert(id);
+	
 	$.ajax({
 		url:"../ActionPages/block.php",
 		type:"post",
